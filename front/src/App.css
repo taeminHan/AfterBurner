@@ -1,0 +1,206 @@
+/* 공통된 속성들을 변수화 (CSS 변수 사용 가능) */
+:root {
+    --primary-color: #007AFF;
+    --secondary-color: #FFFFFF;
+    --shadow-color: #646cffaa;
+    --react-shadow-color: #61dafbaa;
+    --padding-small: 10px;
+    --padding-medium: 20px;
+    --padding-large: 2rem;
+    --border-radius-small: 3px;
+    --border-radius-medium: 5px;
+}
+
+#root {
+    max-width: 1280px;
+    padding: var(--padding-large);
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms ease;
+}
+
+.logo:hover {
+    filter: drop-shadow(0 0 2em var(--shadow-color));
+}
+
+.logo.react:hover {
+    filter: drop-shadow(0 0 2em var(--react-shadow-color));
+}
+
+@keyframes logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+        animation: logo-spin infinite 20s linear;
+    }
+}
+
+.card {
+    padding: var(--padding-large);
+    box-sizing: border-box;
+}
+
+.read-the-docs {
+    color: #888;
+}
+
+/* Flexbox 개선 */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content {
+    margin: var(--padding-medium);
+}
+
+.content-flex {
+    margin: var(--padding-small);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    z-index: 999;
+    margin-top: 0; /* 상단 넘침 방지 */
+}
+
+.tab {
+    width: 90px;
+    height: 47px;
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tab-text {
+    font-weight: bold;
+    text-align: center;
+}
+
+.progressbar {
+    width: 100%;
+    height: 10px;
+    border-radius: var(--border-radius-medium);
+    margin-top: 10px;
+    background-color: #00b312;
+}
+
+
+.button-common {
+    border-radius: 5px;
+    background: #FFFFFF;
+    border: 1px solid #C0C0C0;
+}
+
+/* rocket-button 스타일 정의 */
+.rocket-button {
+    width: 348px;
+    height: 28px;
+    border-radius: 5px;
+    background: #FFFFFF;
+    border: 1px solid #C0C0C0;
+}
+
+/* invite-large 스타일 정의 */
+.invite-large {
+    width: 300px;
+    height: 35px;
+    border-radius: 5px;
+    background: #FFFFFF;
+    border: 1px solid #C0C0C0;
+}
+.invite-small {
+    width: 150px;
+    height: 35px;
+    border-radius: 5px;
+    background: #FFFFFF;
+    border: 1px solid #C0C0C0;
+}
+
+
+.add-cart {
+    width: 174px;
+    height: 46px;
+    border-radius: var(--border-radius-small);
+    background: var(--secondary-color);
+    font-size: 20px;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.add-cart-rocket {
+    width: 401px;
+    height: 51px;
+    background: #FAFAFA;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.container-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img {
+    width: 100px;
+    height: 100px;
+    background-color: #1a1a1a;
+}
+
+.item {
+    margin-left: var(--padding-medium);
+}
+.no-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.item-name {
+    margin: 0;
+}
+.bottom-nav{
+    position: sticky;
+    bottom: 0;
+}
+.bottom-nav-button {
+    width: 100%;
+    height: 50px;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 20px;
+    border: none;
+    border-radius: 0;
+}
