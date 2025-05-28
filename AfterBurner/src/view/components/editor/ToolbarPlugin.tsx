@@ -10,7 +10,6 @@ import {
   $isListNode,
   INSERT_ORDERED_LIST_COMMAND,
   INSERT_UNORDERED_LIST_COMMAND,
-  ListNode,
 } from '@lexical/list';
 import { $isHeadingNode, $createHeadingNode } from '@lexical/rich-text';
 import { $findMatchingParent } from '@lexical/utils';
@@ -26,7 +25,7 @@ import {
   Heading3Icon,
   CodeIcon,
 } from 'lucide-react';
-import { $createParagraphNode, $getRoot } from 'lexical';
+import { $createParagraphNode } from 'lexical';
 
 interface ToolbarButtonProps {
   active: boolean;
