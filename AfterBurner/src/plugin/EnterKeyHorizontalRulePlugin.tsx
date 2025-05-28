@@ -6,7 +6,6 @@ import {
   $getSelection,
   $isRangeSelection,
   $createParagraphNode,
-  TextNode
 } from 'lexical';
 import { $createHorizontalRuleNode } from '@lexical/react/LexicalHorizontalRuleNode';
 
