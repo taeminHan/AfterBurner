@@ -52,7 +52,7 @@ export const Editor = () => {
   return (
     <div className="editor-container">
       <LexicalComposer initialConfig={initialConfig}>
-        <div className="editor-content">
+        <div className="editor-content" id='editor-content'>
           <RichTextPlugin
             contentEditable={
               <ContentEditable className="content-editable" />
